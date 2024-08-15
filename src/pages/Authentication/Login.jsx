@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-
+import logo from '../../assets/images/logo.avif'
 const Login = () => {
     return (
-      <div className='flex justify-center items-center min-h-[calc(100vh-306px)]'>
+      <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
         <div className='flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl '>
           <div
             className='hidden bg-cover bg-center lg:block lg:w-1/2'
@@ -15,7 +15,7 @@ const Login = () => {
             <div className='flex justify-center mx-auto'>
               <img
                 className='w-auto h-7 sm:h-8'
-                src='https://i.ibb.co/SBLyVTz/1-0ae182fa-8c71-468e-850b-23fc81cb3bf4-540x.webp'
+                src={logo}
                 alt=''
               />
             </div>
