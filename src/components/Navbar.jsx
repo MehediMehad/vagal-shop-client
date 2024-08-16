@@ -15,15 +15,15 @@ const Navbar = () => {
             </div>
             <div className='flex-none'>
                 <ul className='menu menu-horizontal px-1'>
-                    <li>
+                    {/* <li>
                         <Link to='/'>Home</Link>
                     </li>
                     <li>
                         <Link to='/products'>Product</Link>
-                    </li>
+                    </li> */}
 
                     {!user && (
-                        <li>
+                        <li className="bg-blue-500 text-white font-bold rounded-md">
                             <Link to='/login'>Login</Link>
                         </li>
                     )

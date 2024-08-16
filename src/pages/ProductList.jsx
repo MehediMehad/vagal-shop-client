@@ -1,44 +1,53 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import Pagination from '../components/Pagination';
 import SearchBar from '../components/SearchBar';
 import Filter from '../components/Filter';
 import Sorting from '../components/Sorting';
+import axios from 'axios';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [queryParams, setQueryParams] = useState('');
 
-  const fetchProducts = async (queryParams = '') => {
-    const response = await axios.get(`http://localhost:9000/api/products${queryParams}`);
+  const fetchProducts = async (page = 1) => {
+    const response = await axios.get(`https://vogal-shop-server.vercel.app/api/products?page=${page}${queryParams}`);
     setProducts(response.data.products || response.data);
     setTotalPages(response.data.totalPages || 1);
   };
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [queryParams]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    fetchProducts(`?page=${page}`);
+    fetchProducts(page);
   };
 
   const handleSearch = (query) => {
-    fetchProducts(`/search?q=${query}`);
+    const newQuery = query ? `&q=${query}` : '';
+    setQueryParams(newQuery);
+    setCurrentPage(1);
   };
 
   const handleFilter = (filterParams) => {
-    const query = Object.entries(filterParams)
+    const filterQuery = Object.entries(filterParams)
+      .filter(([_, value]) => value)
       .map(([key, value]) => `${key}=${value}`)
       .join('&');
-    fetchProducts(`/filter?${query}`);
+    
+    const newQuery = filterQuery ? `&${filterQuery}` : '';
+    setQueryParams(newQuery);
+    setCurrentPage(1);
   };
 
   const handleSort = (sortBy) => {
-    fetchProducts(`/sort?sortBy=${sortBy}`);
+    const newQuery = sortBy ? `&sortBy=${sortBy}` : '';
+    setQueryParams(newQuery);
+    setCurrentPage(1);
   };
 
   return (

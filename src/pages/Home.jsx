@@ -1,8 +1,9 @@
+import ProductList from "./ProductList";
 
 const Home = () => {
     return (
         <div>
-            Home
+            <ProductList></ProductList>
         </div>
     );
 };

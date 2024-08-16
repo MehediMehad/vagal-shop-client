@@ -8,15 +8,15 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="flex justify-center mt-4">
+    <div className="flex justify-center ">
       <input 
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="px-4 py-2 border border-gray-400"
+        className="px-4 py-2 border rounded-md border-gray-400"
         placeholder="Search products..."
       />
-      <button onClick={handleSearch} className="px-4 py-2 bg-blue-500 text-white ml-2">
+      <button onClick={handleSearch} className="px-4 py-2 bg-blue-500 rounded-md text-white ml-2">
         Search
       </button>
     </div>

@@ -148,7 +148,7 @@ const Login = () => {
                             to='/registration'
                             className='text-xs text-gray-500 uppercase  hover:underline'
                         >
-                            or sign up
+                            or <span className="text-blue-400">sign up</span>
                         </Link>
 
                         <span className='w-1/5 border-b  md:w-1/4'></span>
