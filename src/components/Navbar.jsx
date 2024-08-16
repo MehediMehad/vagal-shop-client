@@ -19,7 +19,7 @@ const Navbar = () => {
                         <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <div>Product</div>
+                        <Link to='/products'>Product</Link>
                     </li>
 
                     {!user && (
