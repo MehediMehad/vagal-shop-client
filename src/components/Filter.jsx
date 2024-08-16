@@ -30,7 +30,7 @@ const Filter = ({ onFilter }) => {
         value={priceRange}
         onChange={(e) => setPriceRange(e.target.value)}
         className="px-4 py-2 border border-gray-400"
-        placeholder="Price Range"
+        placeholder="Price RangeType 100-500"
       />
       <button onClick={handleFilter} className="px-4 py-2 bg-blue-500 text-white">
         Filter
