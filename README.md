@@ -1,5 +1,7 @@
 ## Vogal Shop
-#### Live link: https://vagal-shop.web.app
+
+### Live link: https://vagal-shop.web.app
+
 **Single Page Web Application (Product Filtering App)**
 
 ## Overview
@@ -35,4 +37,17 @@ To set up and run this project, ensure you have the following software installed
 2. **Clone the Server:**
    ```bash
    git clone https://github.com/MehediMehad/vagal-shop-server.git
+   ```
+3. **Install dependencies server and client:**
+   ```bash
+   npm install
+   ```
+4. **Create a .env file:**
+   ```bash
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   ```
+4. **Run the server and client:**
+   ```bash
+   npm run dev
    ```
