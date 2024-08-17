@@ -1,5 +1,5 @@
-# Project Name
-
+## Vogal Shop
+#### Live link: https://vagal-shop.web.app
 **Single Page Web Application (Product Filtering App)**
 
 ## Overview
@@ -28,7 +28,11 @@ To set up and run this project, ensure you have the following software installed
 
 ## Setup Instructions
 
-1. **Clone the Project:**
+1. **Clone the Client:**
    ```bash
    git clone https://github.com/MehediMehad/vagal-shop-client.git
+   ```
+2. **Clone the Server:**
+   ```bash
+   git clone https://github.com/MehediMehad/vagal-shop-server.git
    ```
