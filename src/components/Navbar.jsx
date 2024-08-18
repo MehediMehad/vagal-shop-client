@@ -40,7 +40,7 @@ const Navbar = () => {
                             <img
                                 referrerPolicy='no-referrer'
                                 alt='User Profile Photo'
-                                src={user?.photoURL}
+                                src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/Y3Lk4bj/man.png'}
                             />
                         </div>
                     </div>
@@ -49,17 +49,17 @@ const Navbar = () => {
                         className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
                     >
                         <li>
-                            <div className='justify-between'>Add Job</div>
+                            <div className='justify-between'>About</div>
                         </li>
                         <li>
-                            <div>My Posted Jobs</div>
+                            <div>Contact</div>
                         </li>
-                        <li>
+                        {/* <li>
                             <div>My Bids</div>
                         </li>
                         <li>
                             <div>Bid Requests</div>
-                        </li>
+                        </li> */}
                         <li className='mt-2'>
                             <button onClick={logOut} className='bg-gray-200 block text-center'>Logout</button>
                         </li>

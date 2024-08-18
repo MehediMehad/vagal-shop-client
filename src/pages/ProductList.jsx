@@ -14,6 +14,7 @@ const ProductList = () => {
 
   const fetchProducts = async (page = 1) => {
     const response = await axios.get(`https://vogal-shop-server.vercel.app/api/products?page=${page}${queryParams}`);
+    // const response = await axios.get(`http://localhost:9000/api/products?page=${page}${queryParams}`);
     setProducts(response.data.products || response.data);
     setTotalPages(response.data.totalPages || 1);
   };
